@@ -6,7 +6,7 @@ let result=document.getElementById("result");
 
 let getMovie = () => {
   let movieName = movieNameref.value ;
-  let url = `http://www.omdbapi.com/?t=${movieName}& apikey=${key}`
+  let url = `https://www.omdbapi.com/?t=${movieName}& apikey=${key}`;
 
   if(movieName.length <= 0){
     result.innerHTML=`<h3 class="msg">Please Enter A Movie Name</h3>`
