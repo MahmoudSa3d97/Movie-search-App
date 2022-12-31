@@ -12,7 +12,9 @@ let getMovie = () => {
     result.innerHTML=`<h3 class="msg">Please Enter A Movie Name</h3>`
   }
   else{
-    fetch(url)
+    fetch(url,{
+        referrerPolicy: "unsafe_url";
+    })
     .then((resp) => resp.json())
     .then((data) => {
       if(data.Response == "True"){
