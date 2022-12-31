@@ -6,15 +6,13 @@ let result=document.getElementById("result");
 
 let getMovie = () => {
   let movieName = movieNameref.value ;
-  let url = `https://www.omdbapi.com/?t=${movieName}& apikey=${key}`;
+  let url = `http://www.omdbapi.com/?t=${movieName}& apikey=${key}`
 
   if(movieName.length <= 0){
     result.innerHTML=`<h3 class="msg">Please Enter A Movie Name</h3>`
   }
   else{
-    fetch(url,{
-        referrerPolicy: "unsafe_url";
-    })
+    fetch(url)
     .then((resp) => resp.json())
     .then((data) => {
       if(data.Response == "True"){
