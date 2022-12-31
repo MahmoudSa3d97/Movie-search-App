@@ -14,7 +14,7 @@ let getMovie = () => {
   else{
     fetch(url)
     .then((resp) => resp.json())
-    .then(async(data) => {
+    .then((data) => {
       if(data.Response == "True"){
       result.innerHTML=`
       <div class="info">
